@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-black text-white h-screen snap-y snap-mandatory overflow-scroll">
+    <div className="bg-black font-Nunito text-white h-screen snap-y snap-mandatory overflow-scroll">
       <Head>
         <title>Alexander Rusiecki</title>
       </Head>

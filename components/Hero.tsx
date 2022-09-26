@@ -28,12 +28,16 @@ const Hero = (props: Props) => {
     delaySpeed: 1000,
   });
   return (
-    <section className="flex flex-col items-center justify-center my-40 snap-center">
-      <h1>Alexander Rusiecki</h1>
-      <h2>
+    <section className="flex flex-col items-center justify-center h-screen px-14 snap-center">
+      <h1 className="text-3xl mb-4">Alexander Rusiecki</h1>
+      <div className="font-extralight">
+        <p>Hi! I´m a web developer in the making.</p>
+        <p>Based in Stockholm, Sweden</p>
+      </div>
+      <h3 className="italic mt-16">
         <span>{text}</span>
         <Cursor cursorColor="red" />
-      </h2>
+      </h3>
     </section>
   );
 };
