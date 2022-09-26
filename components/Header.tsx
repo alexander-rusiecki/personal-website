@@ -5,7 +5,10 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className="p-5 flex items-center justify-between sticky top-0 h-1/8 max-w-7xl mx-auto z-10 md:h-1/10 md:p-10 lg:p-12 xl:items-center">
+    <header
+      id="header"
+      className="p-5 flex items-center justify-between sticky top-0 h-1/8 max-w-7xl mx-auto z-10 md:h-1/10 md:p-10 lg:p-12 xl:items-center"
+    >
       <motion.section
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
         animate={{ x: 0, opacity: 1, scale: 1 }}

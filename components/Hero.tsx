@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 type Props = {};
@@ -28,16 +29,35 @@ const Hero = (props: Props) => {
     delaySpeed: 1000,
   });
   return (
-    <section className="flex flex-col items-center justify-center h-screen px-14 snap-center">
+    <section
+      id="hero"
+      className="flex flex-col items-center justify-center h-screen snap-start"
+    >
       <h1 className="text-3xl mb-4">Alexander Rusiecki</h1>
-      <div className="font-extralight">
+      <article className="font-extralight px-14">
         <p>Hi! I´m a web developer in the making.</p>
         <p>Based in Stockholm, Sweden</p>
-      </div>
-      <h3 className="italic mt-16">
-        <span>{text}</span>
-        <Cursor cursorColor="red" />
-      </h3>
+      </article>
+      <article className="italic mt-16 mb-8">
+        <h2>
+          <span>{text}</span>
+          <Cursor cursorColor="red" />
+        </h2>
+      </article>
+      <article>
+        <Link href="#about">
+          <button className="my-btn">About me</button>
+        </Link>
+        <Link href="#experience">
+          <button className="my-btn">Experience</button>
+        </Link>
+        <Link href="#skills">
+          <button className="my-btn">Skills</button>
+        </Link>
+        <Link href="#contact">
+          <button className="my-btn">Contact me</button>
+        </Link>
+      </article>
     </section>
   );
 };
