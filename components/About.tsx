@@ -6,18 +6,18 @@ const About = (props: Props) => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center h-screen snap-center"
+      className="h-[85vh] flex flex-col items-center justify-center"
     >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="text-2xl mb-4 tracking-[6px] uppercase"
+        className="text-2xl mb-4 tracking-[6px] uppercase lg:text-4xl"
       >
         About
       </motion.h2>
-      <article className="px-4 mx-auto text-center">
+      <article className="px-8 mx-auto leading-7 md:px-24 lg:px-80 lg:text-xl">
         <p>
           Born and raised in the capital of Sweden, Stockholm. I have a
           background in broadcasting and media management. After 14 years in the

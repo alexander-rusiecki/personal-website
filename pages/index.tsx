@@ -9,7 +9,7 @@ import Skills from '../components/Skills';
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-black font-Nunito text-white h-screen snap-y snap-mandatory overflow-scroll">
+    <div className="bg-black text-white font-Nunito">
       <Head>
         <title>Alexander Rusiecki</title>
       </Head>

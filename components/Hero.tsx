@@ -31,15 +31,19 @@ const Hero = (props: Props) => {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center justify-center h-screen snap-start"
+      className="h-[85vh] flex flex-col items-center justify-center"
     >
-      <h1 className="text-3xl mb-4">Alexander Rusiecki</h1>
-      <article className="font-extralight px-14">
-        <p>Hi! I´m a web developer in the making.</p>
-        <p>Based in Stockholm, Sweden</p>
+      <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">
+        Alexander Rusiecki
+      </h1>
+      <article className="font-extralight px-18">
+        <p className="md:text-xl lg:text-2xl">
+          Hi! I´m a web developer in the making
+        </p>
+        <p className="md:text-xl lg:text-2xl">Based in Stockholm, Sweden</p>
       </article>
       <article className="italic mt-16 mb-8">
-        <h2>
+        <h2 className="md:text-xl lg:text-2xl">
           <span>{text}</span>
           <Cursor cursorColor="red" />
         </h2>

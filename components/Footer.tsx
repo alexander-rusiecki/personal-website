@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="p-2 flex items-center justify-center sticky bottom-0"
+      className="h-[5vh] bg-black/90 p-2 flex items-center justify-center sticky bottom-0"
     >
       <Link href="#hero">
         <HomeIcon className="h-6 w-6" />

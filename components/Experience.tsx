@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import ExperienceCard from './ExperienceCard';
 
 type Props = {};
 
@@ -6,18 +7,19 @@ const Experience = (props: Props) => {
   return (
     <section
       id="experience"
-      className="flex flex-col items-center pt-24 h-screen snap-center"
+      className="flex flex-col items-center justify-center h-screen relative"
     >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="text-2xl mb-4 tracking-[6px] uppercase"
+        className="text-2xl mb-4 tracking-[6px] uppercase absolute top-38"
       >
         Work experience
       </motion.h2>
-      <article>
+      <ExperienceCard />
+      {/* <article>
         <h2>Ericsson AB</h2>
         <h3>Media management</h3>
         <address>Stockholm, Sweden</address>
@@ -52,7 +54,7 @@ const Experience = (props: Props) => {
           <time dateTime="1998">1998</time> -<time dateTime="2003">2003</time>
         </p>
         <hr />
-      </article>
+      </article> */}
     </section>
   );
 };

@@ -7,7 +7,7 @@ const Header = (props: Props) => {
   return (
     <header
       id="header"
-      className="p-5 flex items-center justify-between sticky top-0 h-1/8 max-w-7xl mx-auto z-10 md:h-1/10 md:p-10 lg:p-12 xl:items-center"
+      className="h-[10vh] flex items-center justify-between p-6 mx-auto bg-black/90 sticky top-0 max-w-7xl z-10  md:px-20 lg:px-32 xl:items-center"
     >
       <motion.section
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
@@ -40,7 +40,9 @@ const Header = (props: Props) => {
           fgColor="white"
           bgColor="transparent"
         />
-        <p className="uppercase hidden md:inline-flex text-sm">Contact me</p>
+        <p className="uppercase hidden md:inline-flex text-sm cursor-pointer">
+          Contact me
+        </p>
       </motion.section>
     </header>
   );
