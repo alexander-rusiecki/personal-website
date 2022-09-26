@@ -6,12 +6,13 @@ const Skills = (props: Props) => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center pt-48 h-screen snap-center"
+      className="flex flex-col items-center pt-24  snap-center"
     >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
         className="text-2xl mb-4 tracking-[6px] uppercase"
       >
         Skills

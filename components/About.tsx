@@ -12,6 +12,7 @@ const About = (props: Props) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
+        viewport={{ once: true }}
         className="text-2xl mb-4 tracking-[6px] uppercase"
       >
         About
