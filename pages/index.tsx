@@ -5,12 +5,14 @@ import Hero from '../components/Hero';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="bg-black text-white h-screen snap-y snap-mandatory overflow-scroll">
       <Head>
         <title>Alexander Rusiecki</title>
       </Head>
       <Header />
-      <Hero />
+      <main>
+        <Hero />
+      </main>
       <footer></footer>
     </div>
   );

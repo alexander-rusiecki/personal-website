@@ -15,13 +15,13 @@ const Header = (props: Props) => {
         <SocialIcon
           url="https://github.com/alexander-rusiecki"
           target="_blank"
-          fgColor="black"
+          fgColor="white"
           bgColor="transparent"
         />
         <SocialIcon
           url="https://www.linkedin.com/in/alexander-rusiecki-b1428519b/"
           target="_blank"
-          fgColor="black"
+          fgColor="white"
           bgColor="transparent"
         />
       </motion.section>
@@ -34,7 +34,7 @@ const Header = (props: Props) => {
         <SocialIcon
           className="cursor-pointer"
           network="email"
-          fgColor="black"
+          fgColor="white"
           bgColor="transparent"
         />
         <p className="uppercase hidden md:inline-flex text-sm">Contact me</p>
