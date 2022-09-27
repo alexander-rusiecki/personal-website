@@ -10,7 +10,7 @@ import Contact from '../components/Contact';
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen mx-auto snap-y snap-mandatory overflow-scroll max-w-7xl">
+    <div className="h-screen mx-auto snap-y snap-mandatory overflow-y-scroll overflow-x-hidden max-w-7xl scrollbar scrollbar-track-teal-300/20 scrollbar-thumb-gray-900">
       <Head>
         <title>Alexander Rusiecki</title>
       </Head>

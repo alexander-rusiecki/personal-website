@@ -13,7 +13,9 @@ const Contact = (props: Props) => {
     message: string;
   };
   const { register, handleSubmit } = useForm<FormValues>();
-  const onSubmit: SubmitHandler<FormValues> = data => console.log(data);
+  const onSubmit: SubmitHandler<FormValues> = data => {
+    window.location.href = `mailto:alexander.rusiecki@gmail.com?subject=${data.subject}&body=My name is ${data.name}. This is my message to you: ${data.message}. My email is ${data.email}.`;
+  };
   return (
     <section
       id="contact"
