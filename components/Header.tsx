@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
 
 type Props = {};
@@ -30,23 +31,25 @@ const Header = (props: Props) => {
           label="LinkedIn"
         />
       </motion.section>
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1.5 }}
-        className="flex flex-row items-center"
-      >
-        <SocialIcon
-          network="email"
-          fgColor="white"
-          bgColor="transparent"
-          label="Email"
-          className="cursor-pointer"
-        />
-        <p className="uppercase hidden text-sm cursor-pointer font-thin md:inline-flex">
-          Contact me
-        </p>
-      </motion.section>
+      <Link href="#contact">
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+          className="flex flex-row items-center"
+        >
+          <SocialIcon
+            network="email"
+            fgColor="white"
+            bgColor="transparent"
+            label="Email"
+            className="cursor-pointer"
+          />
+          <p className="uppercase hidden text-sm cursor-pointer font-thin md:inline-flex">
+            Contact me
+          </p>
+        </motion.section>
+      </Link>
     </header>
   );
 };
