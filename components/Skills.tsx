@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Skill from './Skill';
 
 type Props = {};
 
@@ -6,52 +7,41 @@ const Skills = (props: Props) => {
   return (
     <section
       id="skills"
-      className="h-screen flex flex-col items-center pt-24 snap-center"
+      className="h-screen flex flex-col items-center justify-center snap-center relative"
     >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="text-2xl mb-4 tracking-[6px] uppercase"
+        className="absolute top-36 text-2xl tracking-[10px] uppercase md:mb-6 lg:text-4xl lg:m-0 lg:p-0 lg:mb-10"
       >
         Skills
       </motion.h2>
-      <article>
-        <h3>Languages</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS/SASS</li>
-          <li>Javascript</li>
-          <li>Typescript</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Tools</h3>
-        <ul>
-          <li>Node</li>
-          <li>NPM</li>
-          <li>Websockets</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Frameworks</h3>
-        <ul>
-          <li>React</li>
-          <li>Next</li>
-          <li>Angular</li>
-          <li>Wordpress</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Additional</h3>
-        <ul>
-          <li>Agile workflows</li>
-          <li>Git</li>
-          <li>Figma</li>
-          <li>WCAG</li>
-        </ul>
-      </article>
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-4 gap-5"
+      >
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+        <Skill />
+      </motion.section>
     </section>
   );
 };
