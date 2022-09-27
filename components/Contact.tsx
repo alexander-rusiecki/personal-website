@@ -1,8 +1,19 @@
 import { motion } from 'framer-motion';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 type Props = {};
 
 const Contact = (props: Props) => {
+  type FormValues = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  };
+  const { register, handleSubmit } = useForm<FormValues>();
+  const onSubmit: SubmitHandler<FormValues> = data => console.log(data);
   return (
     <section
       id="contact"
@@ -17,6 +28,45 @@ const Contact = (props: Props) => {
       >
         Contact
       </motion.h2>
+      <article className="flex items-center">
+        <PhoneIcon className="h-6 w-6 cursor-pointer" />
+        <p>+46762156080</p>
+      </article>
+      <article className="flex items-center">
+        <EnvelopeIcon className="h-6 w-6 cursor-pointer" />
+        <p>alexander.rusiecki@gmail.com</p>
+      </article>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-col space-y-2 w-fit mx-auto"
+      >
+        <div className="flex space-x-2">
+          <input
+            {...register('name')}
+            className="my-inputs"
+            type="text"
+            placeholder="name"
+          />
+          <input
+            {...register('email')}
+            className="my-inputs"
+            type="email"
+            placeholder="email"
+          />
+        </div>
+        <input
+          {...register('subject')}
+          className="my-inputs"
+          type="text"
+          placeholder="subject"
+        />
+        <textarea
+          {...register('message')}
+          className="my-inputs"
+          placeholder="message"
+        />
+        <button className="py-5 px-10 bg-blue-300 rounded-md">Submit</button>
+      </form>
     </section>
   );
 };
