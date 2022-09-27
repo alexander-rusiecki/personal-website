@@ -50,16 +50,16 @@ const Hero = (props: Props) => {
       </article>
       <article>
         <Link href="#about">
-          <button className="my-btn">About</button>
+          <button className="my-links">About</button>
         </Link>
         <Link href="#experience">
-          <button className="my-btn">Experience</button>
+          <button className="my-links">Experience</button>
         </Link>
         <Link href="#skills">
-          <button className="my-btn">Skills</button>
+          <button className="my-links">Skills</button>
         </Link>
         <Link href="#contact">
-          <button className="my-btn">Contact</button>
+          <button className="my-links">Contact</button>
         </Link>
       </article>
     </section>
