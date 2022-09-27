@@ -4,6 +4,6 @@
 
 @layer components {
   .my-btn {
-    @apply text-xs px-3 py-1 m-1 border border-white rounded-full transition-all hover:border-white/40 hover:text-white/40 md:uppercase md:text-sm md:px-5 md:py-2 md:m-2 md:border md:border-white md:rounded-full md:transition-all md:hover:border-white/40 md:hover:text-white/40;
+    @apply text-sm px-3 py-1 m-1 border border-white  rounded-full transition-all hover:border-white/40 hover:text-white/40 md:uppercase md:text-sm md:px-5 md:py-2 md:m-2 md:border md:border-white md:rounded-full md:transition-all md:hover:border-white/40 md:hover:text-white/40;
   }
 }

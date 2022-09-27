@@ -5,10 +5,7 @@ type Props = {};
 
 const Experience = (props: Props) => {
   return (
-    <section
-      id="experience"
-      className="flex flex-col items-center justify-center h-screen relative"
-    >
+    <section id="experience" className="h-screen relative snap-center">
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

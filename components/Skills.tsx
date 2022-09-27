@@ -6,7 +6,7 @@ const Skills = (props: Props) => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center pt-24  snap-center"
+      className="h-screen flex flex-col items-center pt-24 snap-center"
     >
       <motion.h2
         initial={{ opacity: 0 }}

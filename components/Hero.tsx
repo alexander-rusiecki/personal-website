@@ -4,7 +4,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 type Props = {};
 
 const Hero = (props: Props) => {
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: [
       'HTML',
       'CSS',
@@ -31,7 +31,7 @@ const Hero = (props: Props) => {
   return (
     <section
       id="hero"
-      className="h-[85vh] flex flex-col items-center justify-center"
+      className="h-screen flex flex-col items-center justify-center snap-start"
     >
       <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">
         Alexander Rusiecki
@@ -42,7 +42,7 @@ const Hero = (props: Props) => {
         </p>
         <p className="md:text-xl lg:text-2xl">Based in Stockholm, Sweden</p>
       </article>
-      <article className="italic mt-16 mb-8">
+      <article className="italic my-16">
         <h2 className="md:text-xl lg:text-2xl">
           <span>{text}</span>
           <Cursor cursorColor="red" />
@@ -50,7 +50,7 @@ const Hero = (props: Props) => {
       </article>
       <article>
         <Link href="#about">
-          <button className="my-btn">About me</button>
+          <button className="my-btn">About</button>
         </Link>
         <Link href="#experience">
           <button className="my-btn">Experience</button>
@@ -59,7 +59,7 @@ const Hero = (props: Props) => {
           <button className="my-btn">Skills</button>
         </Link>
         <Link href="#contact">
-          <button className="my-btn">Contact me</button>
+          <button className="my-btn">Contact</button>
         </Link>
       </article>
     </section>
