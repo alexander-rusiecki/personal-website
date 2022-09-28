@@ -1,6 +1,6 @@
 export default {
   name: 'pageInfo',
-  title: 'pageInfo',
+  title: 'PageInfo',
   type: 'document',
   fields: [
     {
@@ -17,16 +17,6 @@ export default {
       name: 'about',
       title: 'About',
       type: 'string',
-    },
-    {
-      name: 'experience',
-      title: 'Experience',
-      type: 'array',
-    },
-    {
-      name: 'skills',
-      title: 'Skills',
-      type: 'array',
     },
     {
       name: 'phoneNumber',
