@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Tv4Logo from '../images/tv4-logo.png';
+import { Experience } from '../typings';
 
-type Props = {};
+type Props = {
+  experience: Experience;
+};
 
-const ExperienceCard = (props: Props) => {
+const ExperienceCard = ({ experience }: Props) => {
   return (
     <article className="flex flex-col items-center justify-evenly rounded-lg  flex-shrink-0 w-screen  snap-center ">
       <motion.div
@@ -15,7 +18,7 @@ const ExperienceCard = (props: Props) => {
         viewport={{ once: true }}
       >
         <Image
-          src={Tv4Logo}
+          src={experience.logoUrl}
           layout="fill"
           objectFit="contain"
           priority
@@ -23,11 +26,12 @@ const ExperienceCard = (props: Props) => {
         />
       </motion.div>
       <div>
-        <h2>TV4 AB</h2>
-        <h3>Media management</h3>
-        <address>Stockholm, Sweden</address>
+        <h2>{experience.companyName}</h2>
+        <h3>{experience.jobTitle}</h3>
+        <address>{experience.location}</address>
         <p>
-          <time dateTime="2006">2006</time> -<time dateTime="2009">2009</time>
+          <time dateTime="2006">{experience.startDate}</time> -
+          <time dateTime="2009">{experience.endDate}</time>
         </p>
       </div>
     </article>

@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { PageInfo } from '../typings';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const Hero = (props: Props) => {
+const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
       'HTML',
@@ -33,14 +36,10 @@ const Hero = (props: Props) => {
       id="hero"
       className="h-screen flex flex-col items-center justify-center snap-start"
     >
-      <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">
-        Alexander Rusiecki
-      </h1>
+      <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">{pageInfo.name}</h1>
       <article className="font-extralight px-18">
-        <p className="md:text-xl lg:text-2xl">
-          Hi! I´m a web developer in the making
-        </p>
-        <p className="md:text-xl lg:text-2xl">Based in Stockholm, Sweden</p>
+        <p className="md:text-xl lg:text-2xl">{pageInfo.presentation}</p>
+        <p className="md:text-xl lg:text-2xl">{pageInfo.location}</p>
       </article>
       <article className="italic my-16">
         <h2 className="md:text-xl lg:text-2xl">

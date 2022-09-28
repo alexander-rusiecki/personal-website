@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { SocialIcon } from 'react-social-icons';
+import { Social } from '../typings';
 
-type Props = {};
-
-const Header = (props: Props) => {
+type Props = {
+  socials: Social[];
+};
+const Header = ({ socials }: Props) => {
   return (
     <header
       id="header"
@@ -16,20 +18,17 @@ const Header = (props: Props) => {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center"
       >
-        <SocialIcon
-          url="https://github.com/alexander-rusiecki"
-          target="_blank"
-          fgColor="white"
-          bgColor="transparent"
-          label="Github"
-        />
-        <SocialIcon
-          url="https://www.linkedin.com/in/alexander-rusiecki-b1428519b/"
-          target="_blank"
-          fgColor="white"
-          bgColor="transparent"
-          label="LinkedIn"
-        />
+        {socials.map(social => (
+          <div key={social._id}>
+            <SocialIcon
+              url={social.url}
+              target="_blank"
+              fgColor="white"
+              bgColor="transparent"
+              label="Github"
+            />
+          </div>
+        ))}
       </motion.section>
       <Link href="#contact">
         <motion.section

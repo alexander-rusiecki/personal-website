@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import Skill from './Skill';
+import { Skill as MySkills } from '../typings';
 
-type Props = {};
-
-const Skills = (props: Props) => {
+type Props = {
+  skills: MySkills[];
+};
+const Skills = ({ skills }: Props) => {
   return (
     <section
       id="skills"

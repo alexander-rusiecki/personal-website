@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { PageInfo } from '../typings';
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <section
       id="about"
@@ -18,15 +21,7 @@ const About = (props: Props) => {
         About
       </motion.h2>
       <article className="px-8 mt-16 mx-auto leading-7 md:px-32 md:text-lg lg:text-xl lg:px-64 lg:leading-9">
-        <p>
-          Born and raised in the capital of Sweden, Stockholm. I have a
-          background in broadcasting and media management. After 14 years in the
-          media industry it´s time to move on to bigger and greater things! At
-          the moment I am studying frontend web development with JavaScript and
-          Typescript as my main focus. Also learning about the latest
-          technologies and frameworks such as React, Angular and Nodejs. Check
-          out my Github profile for my projects 🤙🏼
-        </p>
+        <p>{pageInfo.about}</p>
       </article>
     </section>
   );

@@ -2,10 +2,12 @@ import { motion } from 'framer-motion';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { PageInfo } from '../typings';
 
-type Props = {};
-
-const Contact = (props: Props) => {
+type Props = {
+  pageInfo: PageInfo;
+};
+const Contact = ({ pageInfo }: Props) => {
   type FormValues = {
     name: string;
     email: string;
