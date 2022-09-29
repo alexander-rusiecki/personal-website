@@ -39,10 +39,12 @@ const Hero = ({ pageInfo }: Props) => {
       id="hero"
       className="h-screen flex flex-col items-center justify-center snap-start"
     >
-      <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">{pageInfo.name}</h1>
+      <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">
+        {pageInfo?.name}
+      </h1>
       <article className="font-extralight px-18">
-        <p className="md:text-xl lg:text-2xl">{pageInfo.presentation}</p>
-        <p className="md:text-xl lg:text-2xl">Based in {pageInfo.location}</p>
+        <p className="md:text-xl lg:text-2xl">{pageInfo?.presentation}</p>
+        <p className="md:text-xl lg:text-2xl">Based in {pageInfo?.location}</p>
       </article>
       <article className="italic my-16">
         <h2 className="md:text-xl lg:text-2xl">

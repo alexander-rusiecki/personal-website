@@ -18,7 +18,7 @@ const Header = ({ socials }: Props) => {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center"
       >
-        {socials.map(social => (
+        {socials?.map(social => (
           <div key={social._id}>
             <SocialIcon
               url={social.url}

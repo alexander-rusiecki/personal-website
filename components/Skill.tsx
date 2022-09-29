@@ -9,7 +9,7 @@ const Skill = ({ skill }: Props) => {
   return (
     <article className="w-8 h-8 rounded-full relative">
       <Image
-        src={skill.skillLogoUrl}
+        src={skill?.skillLogoUrl}
         layout="fill"
         objectFit="contain"
         priority

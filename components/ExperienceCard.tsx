@@ -18,7 +18,7 @@ const ExperienceCard = ({ experience }: Props) => {
         viewport={{ once: true }}
       >
         <Image
-          src={experience.logoUrl}
+          src={experience?.logoUrl}
           layout="fill"
           objectFit="contain"
           priority
@@ -26,12 +26,12 @@ const ExperienceCard = ({ experience }: Props) => {
         />
       </motion.div>
       <div>
-        <h2>{experience.companyName}</h2>
-        <h3>{experience.jobTitle}</h3>
-        <address>{experience.location}</address>
+        <h2>{experience?.companyName}</h2>
+        <h3>{experience?.jobTitle}</h3>
+        <address>{experience?.location}</address>
         <p>
-          <time dateTime="2006">{experience.startDate}</time> -
-          <time dateTime="2009">{experience.endDate}</time>
+          <time dateTime="2006">{experience?.startDate}</time> -
+          <time dateTime="2009">{experience?.endDate}</time>
         </p>
       </div>
     </article>

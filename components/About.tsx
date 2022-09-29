@@ -21,7 +21,7 @@ const About = ({ pageInfo }: Props) => {
         About
       </motion.h2>
       <article className="px-8 mt-16 mx-auto leading-7 md:px-32 md:text-lg lg:text-xl lg:px-64 lg:leading-9">
-        <p>{pageInfo.about}</p>
+        <p>{pageInfo?.about}</p>
       </article>
     </section>
   );

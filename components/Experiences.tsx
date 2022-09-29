@@ -21,7 +21,7 @@ const Experiences = ({ experiences }: Props) => {
         experience
       </motion.h2>
       <article className="w-full  flex space-x-5 overflow-x-scroll  snap-x snap-mandatory  scrollbar-track-teal-300/20 scrollbar-thin scrollbar-thumb-gray-900">
-        {experiences.map(experience => (
+        {experiences?.map(experience => (
           <ExperienceCard key={experience._id} experience={experience} />
         ))}
       </article>
