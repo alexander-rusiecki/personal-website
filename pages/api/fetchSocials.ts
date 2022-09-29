@@ -9,10 +9,7 @@ type Data = {
 
 // TODO: check responding with all data
 const query = groq`
-  *[_type == "social"] {
-    _id,
-    url
-  }
+  *[_type == "social"]
 `;
 
 export default async function handler(

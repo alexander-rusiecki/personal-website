@@ -9,14 +9,7 @@ type Data = {
 
 // TODO: check responding with all data
 const query = groq`
-  *[_type == "pageInfo"][0] {
-    name,
-    presentation,
-    location,
-    about,
-    phoneNumber,
-    email
-  }
+  *[_type == "pageInfo"][0]
 `;
 
 export default async function handler(

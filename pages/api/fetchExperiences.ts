@@ -9,16 +9,7 @@ type Data = {
 
 // TODO: check responding with all data
 const query = groq`
-  *[_type == "experience"] {
-    _id,
-    companyLogo,
-    logoUrl,
-    companyName,
-    jobTitle,
-    location,
-    startDate,
-    endDate
-  }
+  *[_type == "experience"]
 `;
 
 export default async function handler(

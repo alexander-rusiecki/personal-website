@@ -9,11 +9,7 @@ type Data = {
 
 // TODO: check responding with all data
 const query = groq`
-  *[_type == "skill"] {
-    _id,
-    skillLogo,
-    skillLogoUrl
-  }
+  *[_type == "skill"]
 `;
 
 export default async function handler(
