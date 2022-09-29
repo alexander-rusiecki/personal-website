@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { useForm, SubmitHandler } from 'react-hook-form';
-
-import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { PageInfo } from '../typings';
+import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 type Props = {
   pageInfo: PageInfo;

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Tv4Logo from '../images/tv4-logo.png';
 import { Experience } from '../typings';
 
 type Props = {

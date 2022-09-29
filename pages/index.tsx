@@ -43,17 +43,9 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo = await fetchPageInfo();
-  console.log(pageInfo);
-
   const experiences = await fetchExperiences();
-  console.log(experiences);
-
   const skills = await fetchSkills();
-  console.log(skills);
-
   const socials = await fetchSocials();
-  console.log(socials);
-
   return {
     props: {
       pageInfo,
@@ -61,6 +53,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       socials,
     },
-    revalidate: 1,
+    revalidate: 10,
   };
 };
