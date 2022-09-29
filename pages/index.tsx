@@ -1,4 +1,4 @@
-import type { GetStaticProps } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -20,7 +20,7 @@ type Props = {
   socials: Social[];
 };
 
-const Home = ({ pageInfo, experiences, skills, socials }: Props) => {
+const Home: NextPage<Props> = ({ pageInfo, experiences, skills, socials }) => {
   return (
     <div className="h-screen mx-auto snap-y snap-mandatory overflow-y-scroll overflow-x-hidden max-w-7xl scrollbar-thin scrollbar-track-teal-300/20 scrollbar-thumb-gray-900">
       <Head>
@@ -42,10 +42,18 @@ const Home = ({ pageInfo, experiences, skills, socials }: Props) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const skills: Skill[] = await fetchSkills();
-  const socials: Social[] = await fetchSocials();
+  const pageInfo = await fetchPageInfo();
+  console.log(pageInfo);
+
+  const experiences = await fetchExperiences();
+  console.log(experiences);
+
+  const skills = await fetchSkills();
+  console.log(skills);
+
+  const socials = await fetchSocials();
+  console.log(socials);
+
   return {
     props: {
       pageInfo,
