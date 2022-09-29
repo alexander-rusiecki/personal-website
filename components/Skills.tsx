@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import Skill from './Skill';
-import { Skill as MySkills } from '../typings';
+import { Skill as MySkill } from '../typings';
 
 type Props = {
-  skills: MySkills[];
+  skills: MySkill[];
 };
 const Skills = ({ skills }: Props) => {
   return (

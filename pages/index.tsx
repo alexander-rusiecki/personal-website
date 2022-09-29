@@ -1,4 +1,4 @@
-import type { NextPage, GetStaticProps } from 'next';
+import type { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -24,7 +24,7 @@ const Home = ({ pageInfo, experiences, skills, socials }: Props) => {
   return (
     <div className="h-screen mx-auto snap-y snap-mandatory overflow-y-scroll overflow-x-hidden max-w-7xl scrollbar-thin scrollbar-track-teal-300/20 scrollbar-thumb-gray-900">
       <Head>
-        <title>Alexander Rusiecki</title>
+        <title>{pageInfo.name}</title>
       </Head>
       <Header socials={socials} />
       <main>

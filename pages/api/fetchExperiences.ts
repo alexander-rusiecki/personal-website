@@ -7,6 +7,7 @@ type Data = {
   experiences: Experience[];
 };
 
+// TODO: check responding with all data
 const query = groq`
   *[_type == "experience"] {
     _id,

@@ -7,6 +7,7 @@ type Data = {
   pageInfo: PageInfo;
 };
 
+// TODO: check responding with all data
 const query = groq`
   *[_type == "pageInfo"][0] {
     name,

@@ -7,6 +7,7 @@ type Data = {
   socials: Social[];
 };
 
+// TODO: check responding with all data
 const query = groq`
   *[_type == "social"] {
     _id,

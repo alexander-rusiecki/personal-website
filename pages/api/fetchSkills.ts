@@ -7,6 +7,7 @@ type Data = {
   skills: Skill[];
 };
 
+// TODO: check responding with all data
 const query = groq`
   *[_type == "skill"] {
     _id,

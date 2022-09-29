@@ -6,6 +6,7 @@ type Props = {
   pageInfo: PageInfo;
 };
 
+// TODO: can Sanity handle this?
 const Hero = ({ pageInfo }: Props) => {
   const [text] = useTypewriter({
     words: [
