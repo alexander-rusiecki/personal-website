@@ -12,6 +12,7 @@ const Hero = ({ pageInfo }: Props) => {
       'HTML',
       'CSS',
       'Sass',
+      'Tailwind CSS',
       'JavaScript',
       'TypeScript',
       'Node.js',
@@ -22,6 +23,7 @@ const Hero = ({ pageInfo }: Props) => {
       'Mongoose',
       'MySQL',
       'Prisma ORM',
+      'Sanity.IO',
       'Socket.IO',
       'Git',
       'Figma',
@@ -39,7 +41,7 @@ const Hero = ({ pageInfo }: Props) => {
       <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">{pageInfo.name}</h1>
       <article className="font-extralight px-18">
         <p className="md:text-xl lg:text-2xl">{pageInfo.presentation}</p>
-        <p className="md:text-xl lg:text-2xl">{pageInfo.location}</p>
+        <p className="md:text-xl lg:text-2xl">Based in {pageInfo.location}</p>
       </article>
       <article className="italic my-16">
         <h2 className="md:text-xl lg:text-2xl">
