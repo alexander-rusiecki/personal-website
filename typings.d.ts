@@ -36,8 +36,8 @@ export interface Experience extends SanityBody {
 
 export interface Skill extends SanityBody {
   _type: 'skill';
-  title: string;
-  image: Image;
+  skillLogo: Image;
+  skillLogoUrl: string;
 }
 
 export interface Social extends SanityBody {

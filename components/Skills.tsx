@@ -27,22 +27,9 @@ const Skills = ({ skills }: Props) => {
         viewport={{ once: true }}
         className="grid grid-cols-4 gap-5"
       >
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {skills.map(skill => (
+          <Skill key={skill._id} skill={skill} />
+        ))}
       </motion.section>
     </section>
   );

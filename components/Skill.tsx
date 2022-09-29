@@ -1,17 +1,19 @@
 import Image from 'next/image';
-import Tv4Logo from '../images/tv4-logo.png';
+import { Skill } from '../typings';
 
-type Props = {};
+type Props = {
+  skill: Skill;
+};
 
-const Skill = (props: Props) => {
+const Skill = ({ skill }: Props) => {
   return (
     <article className="w-8 h-8 rounded-full relative">
       <Image
-        src={Tv4Logo}
+        src={skill.skillLogoUrl}
         layout="fill"
         objectFit="contain"
         priority
-        alt="TV4 logo"
+        alt="skill logo"
       />
     </article>
   );

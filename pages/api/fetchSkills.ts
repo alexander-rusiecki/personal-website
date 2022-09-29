@@ -10,7 +10,8 @@ type Data = {
 const query = groq`
   *[_type == "skill"] {
     _id,
-    image
+    skillLogo,
+    skillLogoUrl
   }
 `;
 

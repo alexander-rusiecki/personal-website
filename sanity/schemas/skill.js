@@ -4,9 +4,16 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'image',
-      title: 'Image',
+      name: 'skillLogo',
+      title: 'SkillLogo',
       type: 'image',
+      description: 'Skills section',
+    },
+    {
+      name: 'skillLogoUrl',
+      title: 'SkillLogoUrl',
+      type: 'string',
+      description: 'Skills section',
     },
   ],
 };
