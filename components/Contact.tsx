@@ -34,11 +34,11 @@ const Contact = ({ pageInfo }: Props) => {
       </motion.h2>
       <article className="flex items-center">
         <PhoneIcon className="h-6 w-6 cursor-pointer" />
-        <p>+46762156080</p>
+        <p>{pageInfo.phoneNumber}</p>
       </article>
       <article className="flex items-center">
         <EnvelopeIcon className="h-6 w-6 cursor-pointer" />
-        <p>alexander.rusiecki@gmail.com</p>
+        <p>{pageInfo.email}</p>
       </article>
       <form
         onSubmit={handleSubmit(onSubmit)}
