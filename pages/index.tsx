@@ -7,20 +7,28 @@ import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
-import { PageInfo, Experience, Skill, Social } from '../typings';
+import { PageInfo, Technology, Experience, Skill, Social } from '../typings';
 import { fetchPageInfo } from '../utils/fetchPageInfo';
+import { fetchTechnologies } from '../utils/fetchTechnologies';
 import { fetchExperiences } from '../utils/fetchExperiences';
 import { fetchSkills } from '../utils/fetchSkills';
 import { fetchSocials } from '../utils/fetchSocials';
 
 type Props = {
   pageInfo: PageInfo;
+  technologies: Technology[];
   experiences: Experience[];
   skills: Skill[];
   socials: Social[];
 };
 
-const Home: NextPage<Props> = ({ pageInfo, experiences, skills, socials }) => {
+const Home: NextPage<Props> = ({
+  pageInfo,
+  technologies,
+  experiences,
+  skills,
+  socials,
+}) => {
   return (
     <div className="h-screen mx-auto snap-y snap-mandatory overflow-y-scroll overflow-x-hidden max-w-7xl scrollbar-thin scrollbar-track-teal-300/20 scrollbar-thumb-gray-900">
       <Head>
@@ -28,7 +36,7 @@ const Home: NextPage<Props> = ({ pageInfo, experiences, skills, socials }) => {
       </Head>
       <Header socials={socials} />
       <main>
-        <Hero pageInfo={pageInfo} />
+        <Hero pageInfo={pageInfo} technologies={technologies} />
         <About pageInfo={pageInfo} />
         <Experiences experiences={experiences} />
         <Skills skills={skills} />
@@ -43,12 +51,14 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo = await fetchPageInfo();
+  const technologies = await fetchTechnologies();
   const experiences = await fetchExperiences();
   const skills = await fetchSkills();
   const socials = await fetchSocials();
   return {
     props: {
       pageInfo,
+      technologies,
       experiences,
       skills,
       socials,

@@ -1,36 +1,15 @@
 import Link from 'next/link';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { PageInfo } from '../typings';
+import { PageInfo, Technology } from '../typings';
 
 type Props = {
   pageInfo: PageInfo;
+  technologies: Technology[];
 };
 
-// TODO: can Sanity handle this?
-const Hero = ({ pageInfo }: Props) => {
+const Hero = ({ pageInfo, technologies }: Props) => {
   const [text] = useTypewriter({
-    words: [
-      'HTML',
-      'CSS',
-      'Sass',
-      'Tailwind CSS',
-      'JavaScript',
-      'TypeScript',
-      'Node.js',
-      'React.js',
-      'Next.js',
-      'Angular',
-      'MongoDB',
-      'Mongoose',
-      'MySQL',
-      'Prisma ORM',
-      'Sanity.IO',
-      'Socket.IO',
-      'Git',
-      'Figma',
-      'Agile workflow',
-      'Web Accessibility',
-    ],
+    words: technologies?.map((tech: Technology) => tech.technologyName),
     loop: true,
     delaySpeed: 1000,
   });
@@ -39,11 +18,11 @@ const Hero = ({ pageInfo }: Props) => {
       id="hero"
       className="h-screen flex flex-col items-center justify-center snap-start"
     >
-      <h1 className="text-4xl mb-4 md:text-5xl lg:text-6xl">
+      <h1 className="text-4xl mb-4 md:text-5xl font-extralight lg:text-6xl">
         {pageInfo?.name}
       </h1>
       <article className="font-extralight px-18">
-        <p className="md:text-xl lg:text-2xl">{pageInfo?.presentation}</p>
+        <p className="pb-1 md:text-xl lg:text-2xl">{pageInfo?.presentation}</p>
         <p className="md:text-xl lg:text-2xl">Based in {pageInfo?.location}</p>
       </article>
       <article className="italic my-16">

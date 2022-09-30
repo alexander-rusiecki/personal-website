@@ -23,6 +23,11 @@ export interface PageInfo extends SanityBody {
   email: string;
 }
 
+export interface Technology extends SanityBody {
+  _type: 'technology';
+  technologyName: string;
+}
+
 export interface Experience extends SanityBody {
   _type: 'experience';
   companyLogo: Image;

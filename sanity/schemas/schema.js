@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // We import object and document schemas
 import pageInfo from './pageInfo';
+import technology from './technology';
 import experience from './experience';
 import skill from './skill';
 import social from './social';
@@ -20,6 +21,7 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     pageInfo,
+    technology,
     experience,
     skill,
     social,
