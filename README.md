@@ -1,5 +1,8 @@
 # personal-website
 
-Alexander Rusiecki´s personal website
+### Alexander Rusiecki´s personal website
 
-[temporary site - under construction](https://personal-website-pied-gamma.vercel.app/)
+- Statically generated pages with Next.js
+- Sanity CMS backend
+
+[temporary site - under construction](https://www.alexanderrusiecki.com/)
