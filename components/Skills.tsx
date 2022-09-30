@@ -9,14 +9,14 @@ const Skills = ({ skills }: Props) => {
   return (
     <section
       id="skills"
-      className="h-screen flex flex-col items-center justify-center snap-center relative"
+      className="h-screen px-16 flex flex-col items-center justify-center mx-auto snap-center"
     >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="absolute top-36 text-2xl tracking-[10px] uppercase md:mb-6 lg:text-4xl lg:m-0 lg:p-0 lg:mb-10"
+        className="mb-24 text-2xl tracking-[10px] uppercase md:text-3xl lg:text-4xl"
       >
         Skills
       </motion.h2>

@@ -8,7 +8,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex flex-col items-center justify-evenly rounded-lg  flex-shrink-0 w-screen  snap-center ">
+    <article className="flex flex-col items-center justify-evenly flex-shrink-0 w-screen snap-center ">
       <motion.div
         className="w-20 h-20 rounded-full relative"
         initial={{ opacity: 0 }}
@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }: Props) => {
           alt="TV4 logo"
         />
       </motion.div>
-      <div>
+      <div className="mb-24 flex flex-col space-evenly">
         <h2>{experience?.companyName}</h2>
         <h3>{experience?.jobTitle}</h3>
         <address>{experience?.location}</address>
