@@ -8,7 +8,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex flex-col items-center justify-evenly flex-shrink-0 w-screen snap-center ">
+    <article className="flex flex-col items-center justify-evenly flex-shrink-0 w-full overflow-hidden snap-center ">
       <motion.div
         className="w-20 h-20 rounded-full relative"
         initial={{ opacity: 0 }}

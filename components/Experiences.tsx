@@ -9,7 +9,7 @@ const Experiences = ({ experiences }: Props) => {
   return (
     <section
       id="experience"
-      className="h-screen px-16 flex flex-col items-center justify-center mx-auto overflow-hidden snap-center md:px-56 lg:px-80"
+      className="h-screen w-3/4 max-w-full flex flex-col items-center justify-center mx-auto overflow-hidden snap-center md:px-56 lg:px-80"
     >
       <motion.h2
         initial={{ opacity: 0 }}
