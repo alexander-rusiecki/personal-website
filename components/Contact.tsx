@@ -21,14 +21,14 @@ const Contact = ({ pageInfo }: Props) => {
   return (
     <section
       id="contact"
-      className="h-screen  px-2 flex flex-col items-center justify-center mx-auto snap-center"
+      className="h-screen px-2 flex flex-col items-center justify-center mx-auto snap-center"
     >
       <motion.h2
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
         viewport={{ once: true }}
-        className="mb-8 text-2xl tracking-[10px] uppercase md:text-3xl lg:text-4xl"
+        className="mt-6 mb-8 text-2xl tracking-[10px] uppercase md:text-3xl lg:text-4xl"
       >
         Contact
       </motion.h2>
@@ -42,9 +42,9 @@ const Contact = ({ pageInfo }: Props) => {
       </article>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-full px-2 mx-auto md:w-1/4"
+        className="flex flex-col w-full px-2 mx-auto md:w-fit"
       >
-        <div className="flex flex-col   ">
+        <div className="flex flex-col md:flex-row md:space-x-2">
           <input
             {...register('name')}
             className="my-inputs"
@@ -69,7 +69,9 @@ const Contact = ({ pageInfo }: Props) => {
           className="my-inputs"
           placeholder="message"
         />
-        <button className="py-5 px-10 bg-teal-600	 rounded-md">Submit</button>
+        <button className="py-5 px-10 bg-teal-600 mt-2	 rounded-md">
+          Submit
+        </button>
       </form>
     </section>
   );

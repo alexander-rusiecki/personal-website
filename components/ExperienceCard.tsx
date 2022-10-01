@@ -21,12 +21,12 @@ const ExperienceCard = ({ experience }: Props) => {
           layout="fill"
           objectFit="contain"
           priority
-          alt="TV4 logo"
+          alt={`${experience?.companyName} logo`}
         />
       </motion.div>
-      <div className="mb-24 flex flex-col space-evenly">
-        <h2>{experience?.companyName}</h2>
-        <h3>{experience?.jobTitle}</h3>
+      <div className="mb-12 flex flex-col space-evenly">
+        <h2 className="text-center">{experience?.companyName}</h2>
+        <p>{experience?.jobTitle}</p>
         <address>{experience?.location}</address>
         <p>
           <time dateTime="2006">{experience?.startDate}</time> -
