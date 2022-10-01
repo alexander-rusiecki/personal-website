@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { motion } from 'framer-motion';
 import { PageInfo } from '../typings';
 import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
@@ -9,6 +12,11 @@ type Props = {
 };
 
 const Contact = ({ pageInfo }: Props) => {
+  const notify = () =>
+    toast.success('Email sent successfully', {
+      theme: 'dark',
+    });
+
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.SyntheticEvent) => {
@@ -24,6 +32,7 @@ const Contact = ({ pageInfo }: Props) => {
         result => {
           console.log(result.text);
           form.current?.reset();
+          notify();
         },
         error => {
           console.log(error.text);
@@ -103,6 +112,17 @@ const Contact = ({ pageInfo }: Props) => {
           Submit
         </button>
       </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </section>
   );
 };
