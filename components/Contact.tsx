@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { motion } from 'framer-motion';
@@ -67,7 +67,7 @@ const Contact = ({ pageInfo }: Props) => {
         onSubmit={sendEmail}
         className="flex flex-col w-full px-2 mx-auto md:w-fit"
       >
-        <div className="flex flex-col md:flex-row md:space-x-2">
+        <div className="flex flex-col md:flex-row md:gap-2">
           <label htmlFor="user_name" className="sr-only">
             username
           </label>
@@ -122,6 +122,7 @@ const Contact = ({ pageInfo }: Props) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
+        transition={Zoom}
       />
     </section>
   );
