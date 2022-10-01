@@ -59,26 +59,46 @@ const Contact = ({ pageInfo }: Props) => {
         className="flex flex-col w-full px-2 mx-auto md:w-fit"
       >
         <div className="flex flex-col md:flex-row md:space-x-2">
+          <label htmlFor="user_name" className="sr-only">
+            username
+          </label>
           <input
             className="my-inputs"
             type="text"
             placeholder="name"
             name="user_name"
+            id="user_name"
           />
+          <label htmlFor="user_email" className="sr-only">
+            email
+          </label>
           <input
             className="my-inputs"
             type="email"
             placeholder="email"
             name="user_email"
+            id="user_email"
           />
         </div>
+        <label htmlFor="subject" className="sr-only">
+          subject
+        </label>
         <input
           className="my-inputs"
           type="text"
           placeholder="subject"
           name="subject"
+          id="subject"
         />
-        <textarea className="my-inputs" placeholder="message" name="message" />
+        <label htmlFor="message" className="sr-only">
+          message
+        </label>
+        <textarea
+          className="my-inputs"
+          placeholder="message"
+          name="message"
+          id="message"
+        />
         <button className="py-5 px-10 bg-teal-600 mt-2	 rounded-md">
           Submit
         </button>
