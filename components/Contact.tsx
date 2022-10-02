@@ -108,7 +108,7 @@ const Contact = ({ pageInfo }: Props) => {
           name="message"
           id="message"
         />
-        <button className="py-5 px-10 bg-teal-600 mt-2	 rounded-md">
+        <button className="py-5 px-10 bg-teal-600 hover:bg-teal-700 mt-2 rounded-md">
           Submit
         </button>
       </form>

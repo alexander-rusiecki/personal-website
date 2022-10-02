@@ -5,4 +5,4 @@
 - Statically generated pages with Next.js
 - Sanity CMS backend
 
-[temporary site - under construction](https://www.alexanderrusiecki.com/)
+[Check it out 🤙🏼](https://www.alexanderrusiecki.com/)

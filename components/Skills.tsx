@@ -20,17 +20,19 @@ const Skills = ({ skills }: Props) => {
       >
         Skills
       </motion.h2>
-      <motion.section
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-4 gap-5 md:gap-6 lg:gap-7"
-      >
-        {skills?.map(skill => (
-          <Skill key={skill._id} skill={skill} />
+      <section className="grid grid-cols-4 gap-5 md:gap-6 lg:gap-7">
+        {skills?.map((skill, i) => (
+          <motion.section
+            key={skill._id}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: i * 0.2 }}
+            viewport={{ once: true }}
+          >
+            <Skill skill={skill} />
+          </motion.section>
         ))}
-      </motion.section>
+      </section>
     </section>
   );
 };
