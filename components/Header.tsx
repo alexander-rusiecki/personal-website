@@ -10,7 +10,7 @@ const Header = ({ socials }: Props) => {
   return (
     <header
       id="header"
-      className="flex items-center justify-between p-4 mx-auto bg-[#0f0111]/90 sticky top-0 z-10 md:px-20 md:py-8 lg:px-32 lg:py-12"
+      className="flex items-center justify-between p-4 mx-auto bg-[#0f0111]/90 text-white opacity-90 sticky top-0 z-10 md:px-20 md:py-8 lg:px-32 lg:py-12"
     >
       <motion.section
         initial={{ x: -500, opacity: 0, scale: 0.5 }}
