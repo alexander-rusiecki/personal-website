@@ -33,16 +33,16 @@ const Hero = ({ pageInfo, technologies }: Props) => {
       </article>
       <article>
         <Link href="#about">
-          <button className="my-links">About</button>
+          <a className="my-links">About</a>
         </Link>
         <Link href="#experience">
-          <button className="my-links">Experience</button>
+          <a className="my-links">Experience</a>
         </Link>
         <Link href="#skills">
-          <button className="my-links">Skills</button>
+          <a className="my-links">Skills</a>
         </Link>
         <Link href="#contact">
-          <button className="my-links">Contact</button>
+          <a className="my-links">Contact</a>
         </Link>
       </article>
     </section>

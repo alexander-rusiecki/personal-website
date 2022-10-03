@@ -15,7 +15,9 @@ const Footer = () => {
         viewport={{ once: true }}
       >
         <Link href="#hero">
-          <HomeIcon className="h-6 w-6 cursor-pointer text-white opacity-50	" />
+          <a>
+            <HomeIcon className="h-6 w-6 cursor-pointer text-white opacity-50	" />
+          </a>
         </Link>
       </motion.div>
     </footer>

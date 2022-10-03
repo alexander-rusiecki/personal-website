@@ -1,11 +1,10 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { motion } from 'framer-motion';
 import { PageInfo } from '../typings';
-import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
+import { PhoneIcon } from '@heroicons/react/24/outline';
+import 'react-toastify/dist/ReactToastify.css';
 
 type Props = {
   pageInfo: PageInfo;
