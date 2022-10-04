@@ -35,8 +35,8 @@ export interface Experience extends SanityBody {
   companyName: string;
   jobTitle: string;
   location: string;
-  startDate: string;
-  endDate: string;
+  startDate: number;
+  endDate: number;
 }
 
 export interface Skill extends SanityBody {

@@ -9,7 +9,7 @@ const Experiences = ({ experiences }: Props) => {
   return (
     <section
       id="experience"
-      className="h-screen w-3/4 max-w-full flex flex-col items-center justify-center mx-auto overflow-hidden snap-center md:px-56 lg:px-80"
+      className="h-screen w-min max-w-full flex flex-col items-center justify-center mx-auto overflow-hidden snap-center md:px-56 lg:px-80"
     >
       <motion.h2
         initial={{ opacity: 0 }}
@@ -20,7 +20,7 @@ const Experiences = ({ experiences }: Props) => {
       >
         experience
       </motion.h2>
-      <article className="w-full  flex space-x-5 overflow-x-scroll  snap-x snap-mandatory  scrollbar-track-teal-300/20 scrollbar-thin scrollbar-thumb-gray-900">
+      <article className="w-full  flex space-x-5 mx-auto overflow-x-scroll  snap-x snap-mandatory  scrollbar-track-teal-300/20 scrollbar-thin scrollbar-thumb-gray-900">
         {experiences?.map(experience => (
           <ExperienceCard key={experience._id} experience={experience} />
         ))}

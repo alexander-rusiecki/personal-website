@@ -36,13 +36,13 @@ export default {
     {
       name: 'startDate',
       title: 'StartDate',
-      type: 'date',
+      type: 'number',
       description: 'Experience section',
     },
     {
       name: 'endDate',
       title: 'EndDate',
-      type: 'date',
+      type: 'number',
       description: 'Experience section',
     },
   ],
