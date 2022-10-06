@@ -30,7 +30,7 @@ const Header = ({ socials }: Props) => {
           </div>
         ))}
       </motion.section>
-      <Link href="#contact">
+      <Link href="#contact" passHref>
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
