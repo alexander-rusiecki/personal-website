@@ -11,7 +11,7 @@ const Custom404: NextPage = () => {
         <title>404: Not found</title>
       </Head>
       <main className="flex items-center gap-4">
-        <h1 className="hidden md:inline-block md:text-xl">404 </h1>
+        <h1 className="hidden md:inline-block md:text-xl">404</h1>
         <span className="hidden md:inline-block md:text-xl">-</span>
         <p className="font-thin">This page could not be found</p>
       </main>

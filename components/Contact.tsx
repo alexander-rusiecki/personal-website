@@ -54,7 +54,7 @@ const Contact = ({ pageInfo }: Props) => {
         Contact
       </motion.h2>
       <article className="flex items-center font-extralight mb-4">
-        <PhoneIcon className="h-4 w-4 cursor-pointer" />
+        <PhoneIcon className="h-4 w-4" />
         <p className="px-2">{pageInfo?.phoneNumber}</p>
       </article>
       <form

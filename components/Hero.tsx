@@ -28,7 +28,7 @@ const Hero = ({ pageInfo, technologies }: Props) => {
       <article className="italic my-16">
         <h2 className="md:text-xl lg:text-2xl">
           <span>{text}</span>
-          <Cursor cursorColor="red" />
+          <Cursor cursorColor="rgba(255, 0, 0, 0.5)" />
         </h2>
       </article>
       <article>
