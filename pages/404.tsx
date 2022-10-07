@@ -10,8 +10,10 @@ const Custom404: NextPage = () => {
       <Head>
         <title>404: Not found</title>
       </Head>
-      <main>
-        <h1 className="text-xl mb-12">404 | This page could not be found</h1>
+      <main className="flex items-center gap-4">
+        <h1 className="hidden md:inline-block md:text-xl">404 </h1>
+        <span className="hidden md:inline-block md:text-xl">-</span>
+        <p className="font-thin">This page could not be found</p>
       </main>
       <motion.div
         initial={{ opacity: 0 }}
@@ -21,7 +23,7 @@ const Custom404: NextPage = () => {
       >
         <Link href="/">
           <a>
-            <HomeIcon className="h-6 w-6 cursor-pointer text-white" />
+            <HomeIcon className="h-6 w-6 mt-10 cursor-pointer text-white" />
           </a>
         </Link>
       </motion.div>
