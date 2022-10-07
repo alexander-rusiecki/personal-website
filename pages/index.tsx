@@ -1,18 +1,18 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Experiences from '../components/Experiences';
-import Skills from '../components/Skills';
-import Footer from '../components/Footer';
-import Contact from '../components/Contact';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Experiences from '@/components/Experiences';
+import Skills from '@/components/Skills';
+import Footer from '@/components/Footer';
+import Contact from '@/components/Contact';
 import { PageInfo, Technology, Experience, Skill, Social } from '../typings';
-import { fetchPageInfo } from '../utils/fetchPageInfo';
-import { fetchTechnologies } from '../utils/fetchTechnologies';
-import { fetchExperiences } from '../utils/fetchExperiences';
-import { fetchSkills } from '../utils/fetchSkills';
-import { fetchSocials } from '../utils/fetchSocials';
+import { fetchPageInfo } from '@/utils/fetchPageInfo';
+import { fetchTechnologies } from '@/utils/fetchTechnologies';
+import { fetchExperiences } from '@/utils/fetchExperiences';
+import { fetchSkills } from '@/utils/fetchSkills';
+import { fetchSocials } from '@/utils/fetchSocials';
 
 type Props = {
   pageInfo: PageInfo;
