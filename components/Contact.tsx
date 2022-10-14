@@ -20,23 +20,29 @@ const Contact = ({ pageInfo }: Props) => {
 
   const sendEmail = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-        form.current as HTMLFormElement,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
-      )
-      .then(
-        result => {
-          console.log(result.text);
-          form.current?.reset();
-          notify();
-        },
-        error => {
-          console.log(error.text);
-        }
-      );
+    if (
+      form.current?.user_name.value &&
+      form.current?.user_email.value &&
+      form.current?.subject.value &&
+      form.current?.message.value
+    ) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+          form.current as HTMLFormElement,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+        )
+        .then(
+          () => {
+            form.current?.reset();
+            notify();
+          },
+          error => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
