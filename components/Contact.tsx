@@ -11,11 +11,6 @@ type Props = {
 };
 
 const Contact = ({ pageInfo }: Props) => {
-  const notify = () =>
-    toast.success('Email sent successfully', {
-      theme: 'dark',
-    });
-
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.SyntheticEvent) => {
@@ -36,12 +31,18 @@ const Contact = ({ pageInfo }: Props) => {
         .then(
           () => {
             form.current?.reset();
-            notify();
+            toast.success('Email sent successfully', {
+              theme: 'dark',
+            });
           },
           error => {
             console.log(error.text);
           }
         );
+    } else {
+      toast.error('Please fill out all fields', {
+        theme: 'dark',
+      });
     }
   };
 
