@@ -33,6 +33,11 @@ const Contact = ({ pageInfo }: Props) => {
             form.current?.reset();
             toast.success('Email sent successfully', {
               theme: 'dark',
+              style: {
+                border: '1px solid #313131',
+                borderRadius: '6px',
+                backgroundColor: '#0f0111',
+              },
             });
           },
           error => {
@@ -42,6 +47,11 @@ const Contact = ({ pageInfo }: Props) => {
     } else {
       toast.error('Please fill out all fields', {
         theme: 'dark',
+        style: {
+          border: '1px solid #313131',
+          borderRadius: '6px',
+          backgroundColor: '#0f0111',
+        },
       });
     }
   };
