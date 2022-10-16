@@ -10,12 +10,6 @@ export default {
       description: 'Experience section',
     },
     {
-      name: 'logoUrl',
-      title: 'LogoUrl',
-      type: 'string',
-      description: 'Experience section',
-    },
-    {
       name: 'companyName',
       title: 'CompanyName',
       type: 'string',

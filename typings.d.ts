@@ -31,7 +31,6 @@ export interface Technology extends SanityBody {
 export interface Experience extends SanityBody {
   _type: 'experience';
   companyLogo: Image;
-  logoUrl: string;
   companyName: string;
   jobTitle: string;
   location: string;
@@ -42,7 +41,6 @@ export interface Experience extends SanityBody {
 export interface Skill extends SanityBody {
   _type: 'skill';
   skillLogo: Image;
-  skillLogoUrl: string;
 }
 
 export interface Social extends SanityBody {

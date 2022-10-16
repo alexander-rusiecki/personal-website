@@ -9,11 +9,5 @@ export default {
       type: 'image',
       description: 'Skills section',
     },
-    {
-      name: 'skillLogoUrl',
-      title: 'SkillLogoUrl',
-      type: 'string',
-      description: 'Skills section',
-    },
   ],
 };

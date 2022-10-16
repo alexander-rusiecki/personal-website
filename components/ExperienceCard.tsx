@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { urlFor } from '../sanity';
 import { Experience } from '../typings';
 
 type Props = {
@@ -17,7 +18,7 @@ const ExperienceCard = ({ experience }: Props) => {
         viewport={{ once: true }}
       >
         <Image
-          src={experience?.logoUrl}
+          src={urlFor(experience.companyLogo).url()!}
           layout="fill"
           objectFit="contain"
           priority
