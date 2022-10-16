@@ -26,7 +26,7 @@ const Skills = ({ skills }: Props) => {
             key={skill._id}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: i * 0.2 }}
+            transition={{ duration: 1, delay: i * 0.15 }}
             viewport={{ once: true }}
           >
             <Skill skill={skill} />
