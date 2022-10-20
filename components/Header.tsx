@@ -43,6 +43,7 @@ const Header = ({ socials }: Props) => {
             bgColor="transparent"
             label="Email"
             className="cursor-pointer"
+            role="link"
           />
           <p className="uppercase hidden text-sm cursor-pointer font-thin md:inline-flex">
             Contact me
