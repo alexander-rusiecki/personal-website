@@ -16,7 +16,11 @@ const Footer = () => {
       >
         <Link href="#hero">
           <a>
-            <HomeIcon className="h-6 w-6 cursor-pointer text-white opacity-50	" />
+            <HomeIcon
+              aria-hidden="true"
+              className="h-6 w-6 cursor-pointer text-white opacity-50	"
+            />
+            <span className="sr-only">Home</span>
           </a>
         </Link>
       </motion.div>
