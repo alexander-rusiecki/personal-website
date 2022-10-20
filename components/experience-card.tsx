@@ -21,7 +21,7 @@ const ExperienceCard = ({ experience }: Props) => {
           src={urlFor(experience.companyLogo).url()!}
           layout="fill"
           objectFit="contain"
-          priority
+          priority={true}
           alt={`${experience?.companyName} logo`}
         />
       </motion.div>

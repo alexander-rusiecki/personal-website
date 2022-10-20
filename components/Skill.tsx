@@ -13,7 +13,7 @@ const Skill = ({ skill }: Props) => {
         src={urlFor(skill.skillLogo).url()!}
         layout="fill"
         objectFit="contain"
-        priority
+        priority={true}
         alt="skill logo"
       />
     </article>
