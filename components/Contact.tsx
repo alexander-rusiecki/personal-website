@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 import { motion } from 'framer-motion';
-import { PageInfo } from '../typings';
+import { PageInfo } from '@/typings';
 import { PhoneIcon } from '@heroicons/react/24/outline';
 import 'react-toastify/dist/ReactToastify.css';
 

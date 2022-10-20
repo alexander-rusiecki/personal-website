@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { PageInfo, Technology } from '../typings';
+import { PageInfo, Technology } from '@/typings';
 
 type Props = {
   pageInfo: PageInfo;

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { PageInfo } from '../typings';
+import { PageInfo } from '@/typings';
 
 type Props = {
   pageInfo: PageInfo;

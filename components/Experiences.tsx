@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import ExperienceCard from './ExperienceCard';
-import { Experience } from '../typings';
+import ExperienceCard from '@/components/experience-card';
+import { Experience } from '@/typings';
 
 type Props = {
   experiences: Experience[];

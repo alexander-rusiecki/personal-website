@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { urlFor } from '../sanity';
-import { Experience } from '../typings';
+import { urlFor } from '@/sanity';
+import { Experience } from '@/typings';
 
 type Props = {
   experience: Experience;

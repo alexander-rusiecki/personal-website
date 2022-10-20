@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { urlFor } from '../sanity';
-import { Skill } from '../typings';
+import { urlFor } from '@/sanity';
+import { Skill } from '@/typings';
 
 type Props = {
   skill: Skill;

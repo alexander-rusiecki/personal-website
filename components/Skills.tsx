@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import Skill from './Skill';
-import { Skill as MySkill } from '../typings';
+import Skill from '@/components/skill';
+import { Skill as MySkill } from '@/typings';
 
 type Props = {
   skills: MySkill[];
