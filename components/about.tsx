@@ -6,8 +6,6 @@ type Props = {
 };
 
 const About = ({ pageInfo }: Props) => {
-  console.log(pageInfo);
-
   return (
     <section
       id="about"
