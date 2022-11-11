@@ -4,7 +4,7 @@ import { Experience } from '../typings';
 
 export const fetchExperiences = async (): Promise<Experience[]> => {
   const query = groq`
-  *[_type == "experience"]
+  *[_type == "experience"] | order(startDate desc)
 `;
   const experiences: Experience[] = await sanityClient.fetch(query);
   return experiences;
