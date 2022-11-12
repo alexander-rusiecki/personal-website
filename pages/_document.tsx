@@ -5,17 +5,18 @@ const Document = () => {
   return (
     <Html lang="en" dir="ltr">
       <Head>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', 'auto');
-          ga('send', 'pageview');
-        `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
+          `}
         </Script>
-        <Script
-          src="https://www.google-analytics.com/analytics.js"
-          strategy="afterInteractive"
-        />
         <meta charSet="utf-8" />
         <meta
           name="description"
