@@ -8,7 +8,7 @@ const Document = () => {
         <Script id="google-analytics" strategy="afterInteractive">
           {`
           window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-          ga('create${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}auto');
+          ga('create', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', 'auto');
           ga('send', 'pageview');
         `}
         </Script>
